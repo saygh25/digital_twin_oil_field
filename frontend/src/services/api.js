@@ -3,7 +3,7 @@
  * Seamlessly connects to the FastAPI backend at /api (proxied via Vite).
  */
 
-const BASE_URL = '/api';
+const BASE_URL = `${import.meta.env.VITE_API_URL || ''}/api`;
 
 export const api = {
   // Liveness check
